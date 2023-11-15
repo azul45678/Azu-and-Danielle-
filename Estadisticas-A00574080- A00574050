@@ -1,0 +1,32 @@
+Link de replit: https://replit.com/join/qdktijnbww-azul-esmeraldae
+
+"""
+Objetivo. Algoritmo para obtener estadísticas de zoológico.
+Realiza un algoritmo para obtener las estadísticas en un zoológico donde se requiere un conteo y porcentaje de “n “  animales dentro de determinado rango de edades:
+●	Menor a 2 años
+●	Entre 2 y menor a 5 años
+●	Entre 5 y menor a 10 años
+●	Mayor o igual a 10 años
+El diagrama debe pedir como entrada: si hay otro animal a registrar (respuesta si/no), la edad (años) de cada uno. Tip: utiliza la función lower para validar si y no
+La salida debe especificar la cantidad y el porcentaje de animales en cada rango de edades.
+"""
+#output: conteo y porcentaje de animales
+#input: ¿Hay otro animal?    . lower
+contar = 0 
+categoria1 = 0
+categoria2 = 0 
+animal = input("¿Quieres comenzar a contar animales? (Si/No): ")
+while animal.lower() == "si":
+  contar += 1
+  print(contar)
+  edad = int(input("¿Qué edad tiene el animal?: "))
+  animal = input("¿Quieres contar más animales? (si/no):  ")
+  if edad < 2: 
+    categoria1 += 1
+  elif edad >= 2 and edad < 5: 
+    categoria2 += 1
+porcentaje1 = categoria1*100/contar
+porcentaje2 = categoria2*100/contar
+print(f"Total de animales: {contar}")
+print(f"Categoria 1: {porcentaje1}")
+print(f"categoria 1: {porcentaje2}")
