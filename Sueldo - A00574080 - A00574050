@@ -1,0 +1,32 @@
+Link de replit: https://replit.com/join/asfzkpsgli-azul-esmeraldae 
+
+#Objetivo. Algoritmo para calcular el sueldo de “n” vendedores. 
+#Cada sueldo está compuesto de un salario base y una comisión por ventas. 
+
+#Sueldo Total = Salario base + comisión por ventas
+#La comisión por ventas se calcula tomando un porcentaje de las ventas realizadas, de acuerdo a la siguiente tabla:
+#Ventas	-             Porcentaje de comisión
+#Menor de 3 500	               7%
+#3 500 – 7 000                 10%
+#Mayor de 7000	                15%
+
+#El algoritmo debe pedir como entrada: si hay otro vendedor (respuesta si/no), el nombre de cada vendedor, el salario base de cada uno y el total de ventas realizadas por vendedor.  Tip: utiliza la función lower para validar si y no
+
+#La salida debe tener el nombre del vendedor y su sueldo total
+  
+vendedor = input("¿Hay otro vendedor? (si/no):  ")
+while vendedor.lower() == "si": 
+  nombre = input("Nombre del vendedor:  ")
+  salario = float(input("Salario base:  "))
+  ventas = float(input("Total de ventas:  "))
+  
+  comision = 0
+  if ventas < 3500:
+    comision = ventas * 0.07   #7 porciento 
+  elif ventas >= 3500 and ventas <= 7000:
+    comision = ventas * 0.1    #10 porciento 
+  elif ventas > 7000:
+    comision = ventas * 0.15   #15 porciento
+#DAR SUELDO TOTAL
+  print(f"El sueldo total de {nombre} es: {salario + comision}")
+  
